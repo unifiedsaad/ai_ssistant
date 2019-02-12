@@ -17,7 +17,7 @@ def chatbot(request):
 	## Make api call
 	text = request.GET.get('q','')
 	print(text)
-	rasa_response = requests.get("https://chatbotassistant.herokuapp.com/parse",params={"q":text})
+	rasa_response = requests.get("https://chatbotassistant.herokuapp.com/parse",params={"q":text}).json()
 	# response = response.json()
 	print(rasa_response.json())
 
