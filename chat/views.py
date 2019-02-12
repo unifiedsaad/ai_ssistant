@@ -25,8 +25,7 @@ def chatbot(request):
 	bot_response = bot_response_logic(rasa_response.json())
 	print(bot_response)
 	
-	context = {'response': bot_response}
-	return JsonResponse(context)
+	return "hi"
 
 
 
